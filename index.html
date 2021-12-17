@@ -4,7 +4,7 @@
 <head>
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
-   
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -14,6 +14,32 @@
             width: 70%;
             margin: auto;
         }
+
+        .h4 {
+            color: rgb(0, 133, 62);
+        }
+
+        .h5 {
+            color: rgb(0, 133, 62);
+        }
+
+        /* unvisited link */
+        a:link {
+            color: rgb(0, 133, 62);
+        }
+
+        /* visited link */
+        a:visited {
+            color: green;
+        }
+
+        /* mouse over link */
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* selected link */
+        
     </style>
 </head>
 
@@ -27,7 +53,20 @@
 
     </div>
     <div class="container">
-        <div style="font-size: 40px; color:rgb(0, 133, 62); margin:3rem; font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif;" class="text-center">
+        <div class="container text-center">
+
+            <!-- Standard button -->
+            <a href="#scroll-target1" style="margin-right:3rem;background-color: #C4D600 ; border-radius: 50px;"
+                type="button" class="btn btn-default">New Faculty/Staff</a>
+
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <a href="#scroll-target2" style="background-color: #B9DCD2; border-radius: 50px;" type="button"
+                class="btn btn-default">Retiring Faculty/Staff</a>
+
+
+        </div>
+        <div style="font-size: 40px; color:rgb(0, 133, 62); margin:3rem; font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif;"
+            class="text-center">
             Alumni Accomplishments
         </div>
         <!-- carousel start -->
@@ -76,59 +115,61 @@
 
     <!-- green box -->
     <div style="background-color:rgb(1, 106, 49); margin-top:10rem; ">
-    <div style="margin-bottom:5rem; padding-bottom: 3%;" class="container">
-        <div style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:5rem;font-size: 40px; color:rgb(196, 214, 0); margin:3rem;" class="text-center">
-            Faculty Accomplishments
-        </div>
-        <!-- carousel start -->
-        <div id="myCarousel2" class="carousel slide" data-ride="carousel" data-interval="10000" data-pause="hover">
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="https://pbs.twimg.com/media/FGLKeWbUYAgKlmG?format=jpg&name=small" alt="Chania"
-                        width="460" height="345">
-                </div>
-
-                <div class="item">
-                    <img src="https://pbs.twimg.com/media/FGfwwvaWQAM4mPk?format=jpg&name=large" alt="Chania"
-                        width="460" height="345">
-                </div>
-
-                <div class="item">
-                    <img src="https://pbs.twimg.com/media/FGV47OHWUAsFEye?format=jpg&name=small" alt="Flower"
-                        width="460" height="345">
-                </div>
-
-                <div class="item">
-                    <img src="https://pbs.twimg.com/media/FGQGHjNWQAMWxGz?format=jpg&name=small" alt="Flower"
-                        width="460" height="345">
-                </div>
+        <div style="margin-bottom:5rem; padding-bottom: 3%;" class="container">
+            <div style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:5rem;font-size: 40px; color:rgb(196, 214, 0); margin:3rem;"
+                class="text-center">
+                Student Accomplishments
             </div>
+            <!-- carousel start -->
+            <div id="myCarousel2" class="carousel slide" data-ride="carousel" data-interval="10000" data-pause="hover">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="https://pbs.twimg.com/media/FGLKeWbUYAgKlmG?format=jpg&name=small" alt="Chania"
+                            width="460" height="345">
+                    </div>
 
-            <!-- Left and right controls -->
+                    <div class="item">
+                        <img src="https://pbs.twimg.com/media/FGfwwvaWQAM4mPk?format=jpg&name=large" alt="Chania"
+                            width="460" height="345">
+                    </div>
 
-            <a style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001), rgba(0, 0, 0, 0));"
-                class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
-                <span style="color: rgb(255, 255, 255);" class="glyphicon glyphicon-chevron-left"
-                    aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001), rgba(0, 0, 0, 0));"
-                class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
-                <span style="color: rgb(255, 255, 255);" class="glyphicon glyphicon-chevron-right"
-                    aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+                    <div class="item">
+                        <img src="https://pbs.twimg.com/media/FGV47OHWUAsFEye?format=jpg&name=small" alt="Flower"
+                            width="460" height="345">
+                    </div>
+
+                    <div class="item">
+                        <img src="https://pbs.twimg.com/media/FGQGHjNWQAMWxGz?format=jpg&name=small" alt="Flower"
+                            width="460" height="345">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+
+                <a style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001), rgba(0, 0, 0, 0));"
+                    class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+                    <span style="color: rgb(255, 255, 255);" class="glyphicon glyphicon-chevron-left"
+                        aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001), rgba(0, 0, 0, 0));"
+                    class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+                    <span style="color: rgb(255, 255, 255);" class="glyphicon glyphicon-chevron-right"
+                        aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
-    </div>
         <!-- carousel end -->
 
     </div>
 
     <!-- last carousel -->
-    <div style="margin-bottom:15rem;" class="container">
-        <div style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:5rem;font-size: 40px; color:rgb(0, 133, 62); margin:3rem;" class="text-center">
-            Student<br>Accomplishments
+    <div style="margin-bottom:3rem;" class="container">
+        <div style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:5rem;font-size: 40px; color:rgb(0, 133, 62); margin:3rem;"
+            class="text-center">
+            Faculty Accomplishments
         </div>
         <!-- carousel start -->
         <div id="myCarousel3" class="carousel slide" data-ride="carousel" data-interval="9000" data-pause="hover">
@@ -173,7 +214,370 @@
         <!-- carousel end -->
 
     </div>
+    <hr class="text-center"
+        style="margin:auto; width:70vw;height:2px;border:none;color:rgb(1, 106, 49);background-color:rgb(1, 106, 49);" />
 
+    <div class="container">
+        <div id="scroll-target1" style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:5rem;font-size: 40px; color:rgb(0, 133, 62); margin:3rem;"
+            class="text-center">
+            New Faculty
+        </div>
+        <div class="row">
+            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="text-center"
+        style="margin:auto; width:70vw;height:2px;border:none;color:rgb(1, 106, 49);background-color:rgb(1, 106, 49);" />
+
+    <div class="container">
+        <div style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:5rem;font-size: 40px; color:rgb(0, 133, 62); margin:3rem;"
+            class="text-center">
+            New Staff
+        </div>
+        <div class="row">
+            <div style="border: 0px;" class="col-lg-2  col-md-offset-1 col-lg-offset-1">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-lg-2">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-lg-2">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-lg-2">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-lg-2">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div style="border: 0px;" class="col-lg-2 col-md-offset-1 col-lg-offset-1">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-lg-2">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-lg-2">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-lg-2">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption text-center">
+                        <h4><a href="#" class="" role="">Daniel Bubeck</a></h4>
+                        <p>Lecturer in Voice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center">Learn more about new 2020-2021 FACULTY & STAFF.</p>
+        <hr class="text-center"
+            style="margin:auto; width:70vw;height:2px;border:none;color:rgb(1, 106, 49);background-color:rgb(1, 106, 49);" />
+    </div>
+    <div class="container">
+        <div id="scroll-target2" style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:5rem;font-size: 40px; color:rgb(0, 133, 62); margin:3rem;"
+            class="text-center">
+            Retiring Faculty
+        </div>
+        <div class="row">
+
+            <div style="border: 0px;" class="col-lg-6">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption">
+                        <h4 class="text-center"><a href="#" class="" role="">Donna Emmanuel</a></h4>
+                        <p>Donna Emmanuel, Faculty Emerita in music education, came to higher education via the worlds
+                            of public-school teaching, sales, marketing and public relations. Born in the Blue Ridge
+                            Mountains of Virginia, living on the Florida Gulf Coast for most of her life, and moving to
+                            Texas from Michigan, Donna has a rich and varied background that has helped to form her
+                            philosophy, impact her teaching and scholarship, and drives her passion for service. Her
+                            graduate degrees in music education from the University of Michigan and Michigan State
+                            included related fields in voice, educational psychology and ethnomusicology. She has a
+                            passion for mariachi, having performed in one at the University of Michigan. In 2003, she
+                            founded the first mariachi program at the University of North Texas, Mariachi Águilas. This
+                            has expanded into a highly developed form of community engagement that includes the only
+                            mariachi summer camp of its kind in the country. This camp brings together middle and high
+                            school students, university students, area mariachi directors, and guests from across the
+                            country.</p>
+                        <p>Donna’s areas of scholarly interest include cultural competence, philosophies of music
+                            education, community engagement, urban teaching and learning, and Hispanic issues. Her
+                            interest in community engagement has been demonstrated by her involvement with the College
+                            Music Society, having served as Chair of the National Committee for Community Engagement.
+                            She organized and hosted a national summit on community engagement for this organization and
+                            continues to serve on the committee.</p>
+                        <p>Her growing reputation in this field has been recognized by UNT as she was appointed by
+                            President Lane Rawlins to serve on the President’s Council on Community Engagement. Her work
+                            on this council resulted in her appointment as director of Service Learning and Community
+                            Engagement for the Division of University and Community Relations. She received the UNT
+                            Foundation Award for Community Service in 2015.</p>
+                        <p>Donna is active within the Denton community, is an avid photographer, an INFP, loves to cook
+                            and lives with her best friend, Iggy, a 100-pound German Shephard. She retired from
+                            full-time teaching at UNT in Spring 2020.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-lg-6">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption">
+                        <h4 class="text-center"><a href="#" class="" role="">James Ryon</a></h4>
+                        <p>James Ryon has appeared internationally as recitalist and soloist. Recent performances
+                            include the Bach D minor Concerto with the Southern Illinois Music Festival, the Strauss
+                            Oboe Concerto with the Orchestra Sinfonica Brasileira and both the Strauss Concerto and the
+                            Telemann Concerto for Oboe d'Amore with the UANL Chamber Orchestra in Monterrey, Mexico. In
+                            2011 he was appointed professor of oboe. He holds bachelor's and master's degrees in music
+                            from the Juilliard School and received performance fellowships with the Aspen, Berkshire,
+                            Blossom, Kneisel Hall and New College music festivals. His principal teachers were Robert
+                            Bloom and John Mack.</p>
+                        <p>Ryon has also served as professor of oboe at the Louisiana State University and the
+                            University of Akron, as well as principal oboist with the Akron Symphony, Florida Orchestra,
+                            Orquesta Filarmonica de Caracas, and Orchestra Estadual de Minas Gerais in Belo Horizonte,
+                            Brazil. For 19 years he was a member of the Solaris Quintet in residence at the University
+                            of Akron. He has also taught at the Baldwin Wallace Conservatory; University of South
+                            Florida, where he was a member of the Ars Nova Quintet; and Caracas Philharmonic
+                            Conservatory, where he was director of "Musica en las Escuelas", a musical outreach program
+                            for the city of Caracas, Venezuela.</p>
+                        <p>His interest and research in Brazilian music led him to organize BrazilFest '91 at the
+                            University of Akron, perform at various festivals of Brazilian contemporary music, and
+                            establish the Burle Marx Brazilian Music Collection at the University of Akron's Bierce
+                            Library. In March 2000 he commissioned and premiered João Guilherme Ripper's Abertura
+                            Concertante for Oboe, English Horn and Orchestra with the Akron Symphony. Ryon's CD of 20th
+                            Century Brazilian Chamber Music for Oboe, Cello and Piano with the Burle Marx Trio has been
+                            released by Jeanné Digital. His two recordings with Solaris may be found on Capstone
+                            Records.</p>
+                        <p>With a grant from the Louisiana Division of the Arts in 2005, he and the Burle Marx Trio
+                            inaugurated the Pelican State Chamber Music Series, a series of 12 concerts in New Roads and
+                            Baton Rouge, LA. Prof. Ryon's wide-ranging musical experience includes tours and concerts
+                            with the Pittsburgh Symphony, Cleveland Opera, Cleveland Ballet, Cleveland Orchestra, Ohio
+                            Ballet, Canton Symphony, Charleston Symphony, the Bach Aria Group and the British rock group
+                            Emerson, Lake and Palmer. Born in San Juan, Puerto Rico, he also holds a degree in
+                            engineering and applied science from Yale University.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div style="border: 0px;" class="col-lg-6">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption">
+                        <h4 class="text-center"><a href="#" class="" role="">Kathleen Reynolds</a></h4>
+                        <p>Kathleen Reynolds was the principal bassoonist of the Dallas Opera Orchestra and performed
+                            regularly with the Dallas Symphony, Fort Worth Symphony, and Chamber Music International.
+                            EcoClassics recorded her solo bassoon CD, Gems for Bassoon, with pianist Michele Levin and
+                            clarinetist Mitchell Lurie. She joined the College of Music at the University of North Texas
+                            as professor of bassoon and woodwind chamber music coordinator in the fall of 1995, retiring
+                            in 2020 after 24 years of dedicated service to the profession and being awarded emeritus
+                            status. She has performed at the Peter Britt Music Festival in Jacksonville, Oregon, the
+                            Fredericksburg Festival, the New Hampshire Music Festival, and with members of the Muir
+                            String Quartet at the Montana Chamber Music Festival.</p>
+                        <p>Prior to her appointment at UNT, Ms. Reynolds was a member of the Rochester Philharmonic for
+                            twenty-two years, and was on the faculty at SUNY Geneseo, Nazareth College, Roberts Wesleyan
+                            College and the Hochstein School of Music. Her solo performances include appearances with
+                            the Rochester Philharmonic, the Friends of Music Orchestra in Geneseo, the New Hampshire
+                            Music Festival, the University of North Texas Wind Symphony, and the University of North
+                            Texas Symphony Orchestra. She is a magna cum laude graduate of the Eastman School of Music,
+                            and has studied with K. David Van Hoesen, Norman Herzberg, and Bernard Garfield.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 0px;" class="col-lg-6">
+                <div style="border: 0px;" class="thumbnail">
+                    <img src="https://music.unt.edu/sites/default/files/styles/large/public/bubek_0.jpg?itok=hvgYMLe1"
+                        alt="...">
+                    <div class="caption">
+                        <h4 class="text-center"><a href="#" class="" role="">Margaret Notley</a></h4>
+                        <p>Margaret Notley was Professor of Music History is the author of Lateness and Brahms: Music
+                            and Culture in the Twilight of Viennese Liberalism, AMS Studies in Music (Oxford University
+                            Press, 2007) and the editor of Opera after 1900: An Anthology of Critical Essays (2010). Her
+                            scholarship has been supported by grants from the Fulbright Scholar Program, National
+                            Endowment for the Humanities, and American Philosophical Society, and her work has appeared
+                            in Journal of the American Musicological Society, 19th-Century Music, Journal of Musicology,
+                            and a number of multi-author volumes. For an article on late nineteenth-century adagios she
+                            received the American Musicological Society's Alfred Einstein Award in 2000. From 2001 to
+                            2016, she was a member of the Editorial Board of Journal of Musicology, and she has been an
+                            Associate Editor of 19th-Century Music since 2006.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="text-center"
+            style="margin:auto; width:70vw;height:2px;border:none;color:rgb(1, 106, 49);background-color:rgb(1, 106, 49);" />
+    </div>
+    <div class="container">
+        <div style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:0rem;font-size: 40px; color:rgb(0, 133, 62); margin:3rem;"
+            class="text-center">
+            Retiring Staff
+        </div>
+        <div class="row">
+
+            <div style="border: 0px;" class="col-lg-12">
+                <div style="border: 0px;" class="thumbnail">
+                    <div class="caption">
+                        <h4 class="text-center"><a href="#" class="" role="">Laura Fuller</a></h4>
+                        <h5 class="text-center">Concert & Event Scheduling</h5>
+                        <br>
+                        <p>Laura began working full-time at the College of Music, then known as North Texas State
+                            University, in the late 70’s and early 80’s. She returned to Denton in 1999 and began
+                            working for the College of Music in 2001.</p>
+                        <p>During the interim period, Laura held positions in other arts related
+                            organizations/businesses including The Center for Popular Music at Middle Tennessee State
+                            University, registrar for the East Carolina University Summer Choral Camp, general manager
+                            of the Greenville Choral Society and New Carolina Sinfonia and executive director of the
+                            Pitt County Arts Council in Greenville, NC. She has also worked for Innovative Percussion of
+                            Nashville, TN as music publications distributor.</p>
+                        <p>aura is married to Dr. Daniel Fuller, DDS and has two sons, both graduates of the UNT College
+                            of Music. She enjoys watching sports with her husband, “Go Army,” repurposing found items,
+                            gardening and spending time with her blended family.</p>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <hr class="text-center"
+            style="margin:auto; width:70vw;height:2px;border:none;color:rgb(1, 106, 49);background-color:rgb(1, 106, 49);" />
+    </div>
 </body>
 
 </html>
