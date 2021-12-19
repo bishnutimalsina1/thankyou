@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Designed by Bishnu Timalsina -->
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>Renovations</title>
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,35 +21,6 @@
     <script src="https://mreq.github.io/slick-lightbox/dist/slick-lightbox.js"></script>
 
     <style>
-        .carousel-inner>.item>img,
-        .carousel-inner>.item>a>img {
-            width: 70%;
-            margin: auto;
-        }
-
-        .h4 {
-            color: rgb(0, 133, 62);
-        }
-
-        .h5 {
-            color: rgb(0, 133, 62);
-        }
-
-        /* unvisited link */
-        a:link {
-            color: rgb(0, 133, 62);
-        }
-
-        /* visited link */
-        a:visited {
-            color: green;
-        }
-
-        /* mouse over link */
-        a:hover {
-            text-decoration: underline;
-        }
-
         /* test */
         .your-class,
         .your-class1 {
@@ -75,1161 +47,597 @@
             background-color: white;
             border-radius: 22px;
         }
+        /* test end */
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            width: 70%;
+            margin: auto;
+        }
+
+
+        .diagonal {
+            min-height: 40vh;
+        }
+
+        .diagonal-image {
+            /* margin-top:-20%; */
+            position: relative;
+            /* overflow: hidden; */
+            transition: .5s all;
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            background-position: center;
+            /* background-image: url('https://static.wixstatic.com/media/b25591_3352e742a2e5467aad7df422106fc278~mv2_d_3000_2000_s_2.jpg/v1/fill/w_659,h_412,al_c,q_80,usm_0.66_1.00_0.01/b25591_3352e742a2e5467aad7df422106fc278~mv2_d_3000_2000_s_2.jpg'); */
+        }
+
+        .svg-clip {
+            width: 0;
+            height: 0;
+        }
+
+        .background-image-div {
+            margin-top: -43rem !important;
+            /* width: 45px; */
+            /* display: block; */
+            /* height: 50vh; */
+            /* background: #000000 url('https://images.unsplash.com/photo-1447678523326-1360892abab8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f2c48f62e3ccbc0948518b2188118f95') no-repeat center center; */
+            background-size: cover;
+
+            /* lets clip it*/
+            -webkit-clip-path: url(#hero-clip);
+            -webkit-clip-path: url(#hero-clip2);
+            clip-path: url(#hero-clip);
+            clip-path: url(#hero-clip2);
+        }
+
+        @media screen and (max-width: 600px) {
+            .diagonal {
+                min-height: auto;
+                padding-top: 45px !important;
+            }
+
+            .diagonal-image {
+                margin-top: 0px !important;
+                margin-left: 0px !important;
+                width: 100vw !important;
+                position: relative;
+                overflow: hidden;
+                transition: .5s all;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                /* background: url(https://static.wixstatic.com/media/b25591_3352e742a2e5467aad7df422106fc278~mv2_d_3000_2000_s_2.jpg/v1/fill/w_659,h_412,al_c,q_80,usm_0.66_1.00_0.01/b25591_3352e742a2e5467aad7df422106fc278~mv2_d_3000_2000_s_2.jpg); */
+                background-size: 100% 100%;
+                min-height: 30vh;
+            }
+
+            .diagonal-image .diagonal-text {
+                /* background: rgba(200, 100, 20, .5); */
+                width: 95%;
+                margin-top: 0px;
+                position: absolute;
+                -webkit-clip-path: none;
+                clip-path: none;
+                top: 0;
+                left: 0;
+
+
+
+            }
+
+            .background-image-div {
+                width: 100%;
+                height:auto;
+                /* display: block; */
+                /* height: 50vh; */
+                /* background: #000000 url('https://images.unsplash.com/photo-1447678523326-1360892abab8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f2c48f62e3ccbc0948518b2188118f95') no-repeat center center; */
+                background-size: cover;
+                -webkit-clip-path: none;
+                clip-path: none;
+                margin-top: 0px;
+                /* lets clip it*/
+                /* -webkit-clip-path: url(#hero-clip);
+            clip-path: url(#hero-clip); */
+            }
+
+
+        }
+
+        @media screen and (min-width: 601px) {
+            .diagonal-image:before {
+
+                content: '';
+                box-sizing: border-box;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-origin: content-box;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                top: 0;
+                margin-top: 0px;
+                left: 0;
+
+                border-left: 300px solid rgba(1, 106, 48, 0);
+                border-bottom: 80vh solid rgba(0, 0, 0, 0);
+                transition: .1s all;
+            }
+
+            .diagonal-image .diagonal-text {
+                margin-top: 0px;
+                height: 100%;
+                /* position: absolute; */
+                top: 0;
+                left: 0;
+                /* transform: translateX(100%); */
+                transition: .1s all;
+
+            }
+
+            .background-image-div {
+                width: 100vw;
+
+                /* display: block; */
+                /* height: 50vh; */
+                /* background: #000000 url('https://images.unsplash.com/photo-1447678523326-1360892abab8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f2c48f62e3ccbc0948518b2188118f95') no-repeat center center; */
+                background-size: cover;
+                margin-top: 0px;
+                /* lets clip it*/
+                -webkit-clip-path: url(#hero-clip);
+                -webkit-clip-path: url(#hero-clip2);
+                clip-path: url(#hero-clip);
+                
+            }
+
+            .background-image-div2 {
+                width: 100vw;
+
+                /* display: block; */
+                /* height: 50vh; */
+                /* background: #000000 url('https://images.unsplash.com/photo-1447678523326-1360892abab8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f2c48f62e3ccbc0948518b2188118f95') no-repeat center center; */
+                background-size: cover;
+                margin-top: 0px;
+                /* lets clip it*/
+                -webkit-clip-path: url(#hero-clip);
+                -webkit-clip-path: url(#hero-clip2);
+                clip-path: url(#hero-clip2);
+                
+            }
+
+            
+
+            /* .diagonal-image:hover .diagonal-text {
+                transform: translateX(0);
+            } */
+        }
     </style>
 </head>
 
 <body>
-
-    <div style=" background: url('https://static.wixstatic.com/media/cb6894_fded8c1b75cd4d678d7c7d8ac8b1fd3c~mv2.jpeg/v1/fill/w_1440,h_152,al_c,q_80,usm_0.66_1.00_0.01/cb6894_fded8c1b75cd4d678d7c7d8ac8b1fd3c~mv2.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center;
+    <div style=" background: url('https://thankyou.music.unt.edu/sites/default/files/background.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center;
     height: 15vh; padding-top: 2rem;" class="img-fluid jumbotron center-contain">
         <div class="card text-center" style="width: 100vw;">
-            <p style="color: black; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 60px;"
-                class="card-title">Accomplishments</p>
+            <p style="color: black; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 70px;"
+                class="card-title">Renovations</p>
         </div>
 
     </div>
-    <div class="container">
-        <div class="container text-center">
 
-            <!-- Standard button -->
-            <a href="#scroll-target1" style="margin-right:3rem;background-color: #C4D600 ; border-radius: 50px;"
-                type="button" class="btn ">New Faculty/Staff</a>
+    <div style="padding-left: 5%;  margin-right:5rem; padding-right: 5px;" class="">
+        <div class="container-fluid mt-1 pt-1 pt-md-0 mt-md-1">
+            <div class='row'>
+                <div class="col-md-5 ">
+                    <div class="card border-0 mt-md-5 pt-md-5 bg-transparent">
+                        <div style="padding-top: 5rem; margin-left: 45px;" class="card-body bg-transparent text-left">
+                            <h3 style="color: rgb(53, 105, 31);" class="card-title text-dark">UNT College of Music
+                                Courtyard</h3>
+                            <p style="font-size: 17px;" class="card-text">With enhancing from the Spec’s Charitable Foundation funded by John and
+                                Lindy Rydman.</p>
+                            <p style="font-size: 17px;" class="card-text">A once seldom used space of concrete acted only as a thruway that did
+                                not reflect the grand history is now a vibrant space for relaxation, study and community
+                                building. With new access to the Voertmann Concert Hall lobby (also remodeled).</p>
+                            <p style="font-size: 17px;" class="card-text">John and Lindy Rydman both received music education degrees from UNT
+                                together with their daughter own and operate Spec’s Wines, Spirits and Finer Foods with
+                                locations across Texas, including Denton.</p>
+                            <p style="font-size: 17px;" class="card-text">Has already been used as a Summer opera performance space and a viewing
+                                point for University President Neal Smatresk. Not to worry thought, the sculpture was
+                                moved to a more prominent location within the Courtyard. </p>
 
-            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-            <a href="#scroll-target2" style="background-color: #B9DCD2; border-radius: 50px;" type="button"
-                class="btn btn-danger-outline">Retiring Faculty/Staff</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="width:65vw; margin-left:30%; " class="col-md-5 background-image-div diagonal diagonal-image">
+                    <svg height="0" width="0" class="svg-clip">
+                        <defs>
+                            <!-- 
+                            Adding the clipPathUnits="objectBoundingBox" to the clipPath element.
+                            This sizes the polygon properly.
+                            -->
+                            <clipPath id="hero-clip" clipPathUnits="objectBoundingBox">
+                                <!-- utilize relative values for the points attribute -->
+                                <polygon fill="none" points="0.3,0 1,0 1,.8 .2,.8 " />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="diagonal-text text-white">
+                        <!-- carousel start -->
+                        <div style="margin-top:4rem;" class="container">
+                            <div class="col-lg-2"></div>
+                            <div class="your-class1 col-lg-8">
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/courtyard_001.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/courtyard_001.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/courtyard_002.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/courtyard_002.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/courtyard_003.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/courtyard_003.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/courtyard_004.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/courtyard_004.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/courtyard_005.jpeg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/courtyard_005.jpeg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/courtyard_006.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/courtyard_006.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/courtyard_007.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/courtyard_007.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/courtyard_008.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/courtyard_008.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/courtyard_009.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/courtyard_009.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/courtyard_010.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/courtyard_010.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- carousel end -->
 
-
-        </div>
-        <div style="font-size: 40px; color:rgb(0, 133, 62); margin:3rem; font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif;"
-            class="text-center">
-            Alumni Accomplishments
-        </div>
-
-
-
-
-        <!-- carousel start -->
-        <div class="container">
-            <div class="col-lg-2"></div>
-            <div class="your-class1 col-lg-8">
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/25th_infantry_band_alumni_-_spotlighta.jpg">
-                        <img width=100% height=auto
-                            src="https://thankyou.music.unt.edu/sites/default/files/25th_infantry_band_alumni_-_spotlighta.jpg"> </a>
+                    </div>
                 </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/jeongmin_ha_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/jeongmin_ha_-_spotlighta.jpg"> </a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/scott_scully_-_spotlighta.jpg">
-                        <img width=100% src="https://thankyou.music.unt.edu/sites/default/files/scott_scully_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/ashley_mendeke_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/ashley_mendeke_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/kevin_rosacia_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/kevin_rosacia_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/peter_steenblik_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/peter_steenblik_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/jacqueline_townsend_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/jacqueline_townsend_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/samuel_gaskin_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/samuel_gaskin_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/justin_benavidez_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/justin_benavidez_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/daniel_reza_sabzghabaei_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/daniel_reza_sabzghabaei_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/dzmitry_ulasiuk_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/dzmitry_ulasiuk_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/megan_stapleton_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/megan_stapleton_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/nat_irvin_ii_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/nat_irvin_ii_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/greg_satterthwaite_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/greg_satterthwaite_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/natalie_manning_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/natalie_manning_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/latonia_moore_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/latonia_moore_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/maren_morris_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/maren_morris_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/shuo-hui_sophie_hung_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/shuo-hui_sophie_hung_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/hugh_nini_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/hugh_nini_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/courtney_l_wright_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/courtney_l_wright_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/lisa_despain_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/lisa_despain_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/bryon_crenshaw_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/bryon_crenshaw_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/alyssa_grey_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/alyssa_grey_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/jacob_nydegger_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/jacob_nydegger_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/nick_owsik_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/nick_owsik_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/elizabeth_kramer_anderson_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/elizabeth_kramer_anderson_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/hentus_van_rooyen_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/hentus_van_rooyen_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/lindsay_pope_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/lindsay_pope_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/norah_jones_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/norah_jones_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/phillip_kennedy_johnson_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/phillip_kennedy_johnson_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/hyeyoun_jang_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/hyeyoun_jang_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/yu_nishiyama_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/yu_nishiyama_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/lt_luslaida_barbosa_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/lt_luslaida_barbosa_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/colleen_clark_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/colleen_clark_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/allison_ponthier_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/allison_ponthier_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/jesse_woolery_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/jesse_woolery_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/mario_antonio_porras_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/mario_antonio_porras_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/emily_pulley_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/emily_pulley_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/eric_vazquez_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/eric_vazquez_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/joseph_nunez_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/joseph_nunez_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/ruben_balboa_iii_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/ruben_balboa_iii_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/j.d._burnett_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/j.d._burnett_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/snarky_puppy_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/snarky_puppy_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/lyanne_alvarado_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/lyanne_alvarado_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/anna_jalkeus_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/anna_jalkeus_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/wagner_and_gardner_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/wagner_and_gardner_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/john_sturino_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/john_sturino_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/mason_bynes_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/mason_bynes_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/geoffrey_durbin_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/geoffrey_durbin_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/esme_wong_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/esme_wong_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/joseph_trahan_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/joseph_trahan_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/ryan_sullivan_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/ryan_sullivan_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/elainie_lillios_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/elainie_lillios_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/daniel_james_chan_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/daniel_james_chan_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/michelle_herring_folta_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/michelle_herring_folta_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/eva_polgar_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/eva_polgar_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/sara_sheffield_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/sara_sheffield_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/kimary_fick_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/kimary_fick_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/lyle_mays_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/lyle_mays_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/shara_nova_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/shara_nova_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/jeremy_blackwood_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/jeremy_blackwood_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/jay_walls_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/jay_walls_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/lauren_baker_murray_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/lauren_baker_murray_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/austin_ford_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/austin_ford_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/aaron_powell_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/aaron_powell_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/garry_williams_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/garry_williams_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/jack_eaddy_jr_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/jack_eaddy_jr_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/yang_chen_rev_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/yang_chen_rev_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/kelsey_nussbaum_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/kelsey_nussbaum_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/arsentiy_kharitonov_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/arsentiy_kharitonov_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/william_j_metzger_-_spotlighta.jpg">
-                        <img width=100%
-                            src="https://thankyou.music.unt.edu/sites/default/files/william_j_metzger_-_spotlighta.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/mellonee_burnim_-_spotlighta.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/mellonee_burnim_-_spotlighta.jpg"></a>
-                </div>
-
-
             </div>
-        </div>
-        <!-- carousel end -->
 
+        </div>
     </div>
+
 
     <!-- green box -->
-    <div style="background-color:rgb(1, 106, 49); margin-top:10rem; ">
-        <div style="margin-bottom:5rem; padding-bottom: 3%;" class="container">
-            <div style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:5rem;font-size: 40px; color:rgb(196, 214, 0); margin:3rem;"
-                class="text-center">
-                Student Accomplishments
-            </div>
-            <!-- carousel start -->
-            <div class="container">
-                <div class="col-lg-2"></div>
-                <div class="your-class1 col-lg-8">
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/hilary_grace_taylor_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/hilary_grace_taylor_-_student_spotlight.jpg"></a>
-                    </div>
+    <div style="background-color:rgb(1, 106, 49); margin-top: 3rem; margin-bottom:1rem;">
+        <div class="container-fluid">
+            <div class='row'>
+                
+                <div style="margin-bottom:3rem; width:60vw; margin-top:5rem !important; " class="col-md-1 col-lg-3 background-image-div2 diagonal diagonal-image">
+                    <svg  height="0" width="0" class="svg-clip">
+                        <defs >
+                            <!-- 
+                            Adding the clipPathUnits="objectBoundingBox" to the clipPath element.
+                            This sizes the polygon properly.
+                            -->
+                            <clipPath id="hero-clip2" clipPathUnits="objectBoundingBox">
+                                <!-- utilize relative values for the points attribute -->
+                                <polygon fill="none" points="0.5,0 0,0 0,.8 .65,.8" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="diagonal-text text-white">
+                        <!-- carousel start -->
+                        <!-- carousel start -->
+                        <div class="container">
+                            
+                            <div style="margin-left: 12rem;" class="your-class2 col-lg-8">
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/meit_001.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/meit_001.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/meit_002.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/meit_002.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/meit_003.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/meit_003.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/meit_004.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/meit_004.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/meit_005.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/meit_005.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/meit_006.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/meit_006.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/meit_007.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/meit_007.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/meit_008.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/meit_008.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/meit_009.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/meit_009.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/meit_010.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/meit_010.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- carousel end -->
+                        <!-- carousel end -->
 
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/jonathan_orellana_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/jonathan_orellana_-_student_spotlight.jpg"></a>
                     </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/sungyun_kim_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/sungyun_kim_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/alexa_torres_skillicorn_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/alexa_torres_skillicorn_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/marcel_castro-lima_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/marcel_castro-lima_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/david_humphreys_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/david_humphreys_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/thomas_schwan_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/thomas_schwan_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/jenna_mccall_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/jenna_mccall_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/ariel_glassman_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/ariel_glassman_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/marco_uriegas_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/marco_uriegas_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/dj_rice_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/dj_rice_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/yiyi_gao_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/yiyi_gao_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/joshua_c_jennings_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/joshua_c_jennings_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/bree_nichols_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/bree_nichols_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/michael_clement_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/michael_clement_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/francis_cathlina_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/francis_cathlina_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/max_dobson_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/max_dobson_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/julia_coelho_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/julia_coelho_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/jonathan_story_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/jonathan_story_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/joshua_calef_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/joshua_calef_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/amrutha_murthy_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/amrutha_murthy_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/ran_feng_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/ran_feng_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/eric_hitt_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/eric_hitt_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/destin_wernicke_rev_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/destin_wernicke_rev_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/landon_chang_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/landon_chang_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/anuj_bhutani_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/anuj_bhutani_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/robert_anderson_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/robert_anderson_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/haojian_wang_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/haojian_wang_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/brett_penshorn_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/brett_penshorn_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/madeleine_black_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/madeleine_black_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/brandon_hawkins_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/brandon_hawkins_-_student_spotlight.jpg"></a>
-                    </div>
-                    <div class="">
-                        <a href="https://thankyou.music.unt.edu/sites/default/files/vannesa_nates_-_student_spotlight.jpg">
-                            <img width=100% 
-                                src="https://thankyou.music.unt.edu/sites/default/files/vannesa_nates_-_student_spotlight.jpg"></a>
-                    </div>
+                </div>
 
-
+                <div class="col-md-4">
+                    <div class="card border-0 mt-md-5 pt-md-5 bg-transparent">
+                        <div style="padding-top: 5rem;" class="card-body bg-transparent text-left">
+                            <h3 style="color: rgb(196, 214, 0);" class="card-title text-dark">The Merrill Ellis Intermedia Theater (MEIT)</h3>
+                            <p style="color: white; font-size: 17px;" class="text-white">The renovation to this historic space was significant including the removal of the South balcony.  Planned for completion prior to the Fall semester start-up, it would be six additional months before it was fully functional as a classroom and creative space. A major addition to this space was a previously noon-existent outside entrance with its own lobby are. space that led to a complete reconfiguration of the internal</p>
+                            <p style="color: white; font-size: 17px;" class="card-text">A configurable theater optimized for experimental music, intermedia, and performance art.</p>
+                            <p style="color: white; font-size: 17px;" class="card-text">Ellis founded the electronic music program at the University of North Texas College of Music shortly after he began teaching there in 1962.
+                                ​</p>
+                            <p style="color: white; font-size: 17px;" class="card-text">The Merrill Ellis Intermedia Theater (MEIT) is the performance venue of the Center for Experimental Music and Intermedia (CEMI).</p>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- carousel end -->
+
         </div>
 
     </div>
+    <!-- green box -->
 
-    <!-- last carousel -->
-    <div style="margin-bottom:3rem;" class="container">
-        <div style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:5rem;font-size: 40px; color:rgb(0, 133, 62); margin:3rem;"
-            class="text-center">
-            Faculty Accomplishments
-        </div>
-        <!-- carousel start -->
-        <div class="container">
-            <div class="col-lg-2"></div>
-            <div class="your-class1 col-lg-8">
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/raquel_samayoa_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/raquel_samayoa_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/kristina_caswell_macmullen_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/kristina_caswell_macmullen_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/andrew_trachsel_rev_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/andrew_trachsel_rev_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/eric_nestler_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/eric_nestler_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/margaret_notley_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/margaret_notley_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/jaymee_haefner_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/jaymee_haefner_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/richard_croft_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/richard_croft_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/lynn_seaton_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/lynn_seaton_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/scott_tixier_rev_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/scott_tixier_rev_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/brian_f_wright_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/brian_f_wright_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/molly_fillmore_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/molly_fillmore_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/joseph_banowetz_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/joseph_banowetz_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/crystal_lynn_gerrard_rev_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/crystal_lynn_gerrard_rev_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/andrew_chung_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/andrew_chung_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/pamela_mia_paul_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/pamela_mia_paul_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/david_childs_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/david_childs_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/steven_friedson_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/steven_friedson_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/ellen_bakulina_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/ellen_bakulina_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/kathy_johnson_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/kathy_johnson_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/kimberly_cole_luevano_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/kimberly_cole_luevano_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/david_heetderks_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/david_heetderks_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/philip_dizack_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/philip_dizack_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/gustavo_romero_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/gustavo_romero_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/jennifer_lane_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/jennifer_lane_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/kris_chesky_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/kris_chesky_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/dennis_fisher_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/dennis_fisher_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/phillip_paglialonga_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/phillip_paglialonga_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/hendrik_schulze_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/hendrik_schulze_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/molly_fillmore_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/molly_fillmore_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/jeff_bradetich_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/jeff_bradetich_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/rosana_eckert_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/rosana_eckert_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/jon_christopher_nelson_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/jon_christopher_nelson_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/jerry_mccoy_rev_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/jerry_mccoy_rev_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/caleb_hudson_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/caleb_hudson_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/nick_finzer_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/nick_finzer_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/dave_meder_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/dave_meder_-_faculty_spotlight.jpg"></a>
-                </div>
-                <div class="">
-                    <a href="https://thankyou.music.unt.edu/sites/default/files/stacie_mickens_-_faculty_spotlight.jpg">
-                        <img width=100% 
-                            src="https://thankyou.music.unt.edu/sites/default/files/stacie_mickens_-_faculty_spotlight.jpg"></a>
-                </div>
-            </div>
-        </div>
-        <!-- carousel end -->
+    <!-- white box -->
+    <div style="padding-left: 5%;  margin-right:5rem; padding-right: 5px;" class="">
+        <div class="container-fluid mt-1 pt-1 pt-md-0 mt-md-1">
+            <div class='row'>
+                <div class="col-md-5 ">
+                    <div class="card border-0 mt-md-5 pt-md-5 bg-transparent">
+                        <div style="padding-top: 5rem; margin-left: 45px;" class="card-body bg-transparent text-left">
+                            <h3 style="color: rgb(53, 105, 31);" class="card-title text-dark">Recital Hall</h3>
+                            <p style="font-size: 17px;" class="card-text">Much like the other College of Music renovations, Recital Hall changes included infrastructure upgrades that required near complete gutting of the hall. To enhance performance acoustics, the Kirkegaard company provided significant improvements for a top-notch performer and audience acoustic experience. This hall doubles as a classroom and is now outfitted with 21st-century technology for instruction.</p>
+                            <p style="font-size: 17px;" class="card-text">Along with the Recital Hall, all six performance spaces within the College of Music now have high quality multi-camera live stream capabilities reaching global audiences at no cost to viewers.  </p>
+                           
 
-    </div>
-    <hr class="text-center"
-        style="margin:auto; width:70vw;height:2px;border:none;color:rgb(1, 106, 49);background-color:rgb(1, 106, 49);" />
+                        </div>
+                    </div>
+                </div>
+                <div style="width:65vw; margin-left:30%;" class="col-md-5 background-image-div diagonal diagonal-image">
+                    <svg height="0" width="0" class="svg-clip">
+                        <defs>
+                            <!-- 
+                            Adding the clipPathUnits="objectBoundingBox" to the clipPath element.
+                            This sizes the polygon properly.
+                            -->
+                            <clipPath id="hero-clip" clipPathUnits="objectBoundingBox">
+                                <!-- utilize relative values for the points attribute -->
+                                <polygon fill="none" points="0.3,0 1,0 1,.8 .2,.8 " />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="diagonal-text text-white">
+                        <!-- carousel start -->
+                        <div style="margin-top:11rem;" class="container">
+                            <div class="col-lg-2"></div>
+                            <div class=" your-class3 col-lg-8">
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_001.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_001.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_002.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_002.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_003.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_003.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_004.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_004.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_005.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_005.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_006.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_006.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_007.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_007.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_008.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_008.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_009.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_009.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_010.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_010.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_011.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/_recital_hall_011.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- carousel end -->
 
-    <div class="container">
-        <div id="scroll-target1"
-            style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:5rem;font-size: 40px; color:rgb(0, 133, 62); margin:3rem;"
-            class="text-center">
-            New Faculty
-        </div>
-        <div class="row">
-            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/daniel_bubeck.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/daniel-bubeck" class="" role="">Daniel Bubeck</a></h4>
-                        <p>Lecturer in Voice</p>
                     </div>
                 </div>
             </div>
-            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/darrel_hale.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/darrel-hale" class="" role="">Darrel Hale</a></h4>
-                        <p>Associate Professor of Bassoon</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/debbie_brooks.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/deborah-brooks-0" class="" role="">Deborah S. Brooks</a></h4>
-                        <p>Visiting Lecturer in Music Business Entrepreneurship</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/gal_faganel.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/gal-faganel" class="" role="">Gal Faganel</a></h4>
-                        <p>Visiting Professor of Cello</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/ian_cicco.png"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/ian-cicco" class="" role="">Ian Cicco</a></h4>
-                        <p>Visiting Lecturer in Music Education</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/jung_choi.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/jung-choi" class="" role="">Jung Choi</a></h4>
-                        <p>Assistant Professor of Oboe</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-sm-6 col-md-3 col-lg-3">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/kimberly_hannon_teal.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/kimberly-teal" class="" role="">Kimberly Hannon Teal</a></h4>
-                        <p>Assistant Professor of Jazz History/Jazz Theory</p>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
+    <!-- white box -->
 
-    <hr class="text-center"
-        style="margin:auto; width:70vw;height:2px;border:none;color:rgb(1, 106, 49);background-color:rgb(1, 106, 49);" />
 
-    <div class="container">
-        <div style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:5rem;font-size: 40px; color:rgb(0, 133, 62); margin:3rem;"
-            class="text-center">
-            New Staff
+    <!-- green box -->
+    <div style="background-color:rgb(1, 106, 49); margin-top: 3rem; margin-bottom:1rem;">
+        <div class="container-fluid">
+            <div class='row'>
+                
+                <div style="margin-bottom:3rem; width:60vw; margin-top:5rem !important; " class="col-md-1 col-lg-3 background-image-div2 diagonal diagonal-image">
+                    <svg  height="0" width="0" class="svg-clip">
+                        <defs >
+                            <!-- 
+                            Adding the clipPathUnits="objectBoundingBox" to the clipPath element.
+                            This sizes the polygon properly.
+                            -->
+                            <clipPath id="hero-clip2" clipPathUnits="objectBoundingBox">
+                                <!-- utilize relative values for the points attribute -->
+                                <polygon fill="none" points="0.5,0 0,0 0,.8 .65,.8" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="diagonal-text text-white">
+                        <!-- carousel start -->
+                        <!-- carousel start -->
+                        <div class="container">
+                            
+                            <div style="margin-left: 12rem;" class=" your-class4 col-lg-8">
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/choir_room_001.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/choir_room_001.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/choir_room_002.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/choir_room_002.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/choir_room_003.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/choir_room_003.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/choir_room_004.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/choir_room_004.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/choir_room_005.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/choir_room_005.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/choir_room_006.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/choir_room_006.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/choir_room_007.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/choir_room_007.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/choir_room_008.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/choir_room_008.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/choir_room_009.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/choir_room_009.jpg"></a>
+                                </div>
+                                <div class="">
+                                    <a href="https://thankyou.music.unt.edu/sites/default/files/choir_room_010.jpg">
+                                        <img width=100% 
+                                            src="https://thankyou.music.unt.edu/sites/default/files/choir_room_010.jpg"></a>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <!-- carousel end -->
+                        <!-- carousel end -->
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 mt-md-5 pt-md-5 bg-transparent">
+                        <div style="padding-top: 5rem;" class="card-body bg-transparent text-left">
+                            <h3 style="color: rgb(196, 214, 0);" class="card-title text-dark">Choir Room</h3>
+                            <p style="color: white; font-size: 17px;" class="text-white">Although the rectangular cinder block choir room served its purpose for more than 45 years and saw extraordinary music being prepared, it was time for the space to be brought to a standard befitting the legacy of the UNT music program. Used primarily for choral rehearsal space and conducting classes, it can be transformed, with the pushing of a few buttons, from a busy rehearsal and classroom space, to a performance space ideal for small ensemble performances and recitals complete with live streaming capability. </p>
+                            <p style="color: white; font-size: 17px;" class="card-text">More than cosmetic changes were planned and completed. Significant infrastructure changes were made from new air cooling and heating, electrical wiring and sound proofing enhancements to a transformation of acoustical quality. All the necessities are now in place to provide a first-class educational experience for our students for an additional generation.</p>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="row">
-            <div style="border: 0px;" class="col-lg-2  col-md-offset-1 col-lg-offset-1">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/amanda_miller.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="#" class="" role="">Amanda Miller</a></h4>
-                        <p>Administrative Specialist</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-lg-2">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/brennan_pierce.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="#" class="" role="">Brennan Pierce</a></h4>
-                        <p>Computer Lab Supervisor</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-lg-2">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/carole_overturf.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/carole-overturf" class="" role="">Carole Overturf</a></h4>
-                        <p>(BM '13'), Administrative Coordinator in the Division of Instrumental Studies</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-lg-2">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/laura_russell.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/laura-russell" class="" role="">Laura Russell</a></h4>
-                        <p>(BA '99'), Administrative Coordinator for the Division of Music History/Theory/Ethnomusicology (MHTE), Music Education and Composition Studies Divisions</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-lg-2">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/lyndi_williams_krause.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/lyndi-krause" class="" role="">Lyndi Williams Krause</a></h4>
-                        <p>Senior Administrative Coordinator for Admissions and Awards</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div style="border: 0px;" class="col-lg-2 col-md-offset-1 col-lg-offset-1">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/madison_russell.png"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/madison-russell" class="" role="">Madison Russell</a></h4>
-                        <p>Administrative Coordinator for the Division of Jazz Studies</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-lg-2">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/matt_hellman.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/matt-hellman" class="" role="">Matt Hellman</a></h4>
-                        <p>Graphic Design Specialist</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-lg-2">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/nelda_martinez.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/nelda-martinez" class="" role="">Nelda Martinez</a></h4>
-                        <p>Director of Development</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-lg-2">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/sarah_goocher.jpg"
-                        alt="...">
-                    <div class="caption text-center">
-                        <h4><a href="https://music.unt.edu/faculty-and-staff/sarah-goocher" class="" role="">Sarah Goocher</a></h4>
-                        <p>Assistant Director of Admissions</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p class="text-center" style="font-style: italic; padding: 4rem; font-family: 'Iowan Old Style'; font-style: italic; font-size: 26px;"
-        class="text-center">Learn more about new 2020-2021 <a style="color:rgb(173, 26, 172);"
-            href="https://music.unt.edu/faculty-and-staff">FACULTY & STAFF.</a>
-    </p>
-        <p class="text-center"><a href="https://music.unt.edu/faculty-and-staff"></a></p>
-        <hr class="text-center"
-            style="margin:auto; width:70vw;height:2px;border:none;color:rgb(1, 106, 49);background-color:rgb(1, 106, 49);" />
+
     </div>
-    <div class="container">
-        <div id="scroll-target2"
-            style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:5rem;font-size: 40px; color:rgb(0, 133, 62); margin:3rem;"
-            class="text-center">
-            Retiring Faculty
-        </div>
-        <div class="row">
-
-            <div style="border: 0px;" class="col-lg-6">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/donna_emmanuel_0.jpg"
-                        alt="...">
-                    <div class="caption">
-                        <h4 class="text-center"><a href="#" class="" role="">Donna Emmanuel</a></h4>
-                        <p>Donna Emmanuel, Faculty Emerita in music education, came to higher education via the worlds
-                            of public-school teaching, sales, marketing and public relations. Born in the Blue Ridge
-                            Mountains of Virginia, living on the Florida Gulf Coast for most of her life, and moving to
-                            Texas from Michigan, Donna has a rich and varied background that has helped to form her
-                            philosophy, impact her teaching and scholarship, and drives her passion for service. Her
-                            graduate degrees in music education from the University of Michigan and Michigan State
-                            included related fields in voice, educational psychology and ethnomusicology. She has a
-                            passion for mariachi, having performed in one at the University of Michigan. In 2003, she
-                            founded the first mariachi program at the University of North Texas, Mariachi Águilas. This
-                            has expanded into a highly developed form of community engagement that includes the only
-                            mariachi summer camp of its kind in the country. This camp brings together middle and high
-                            school students, university students, area mariachi directors, and guests from across the
-                            country.</p>
-                        <p>Donna’s areas of scholarly interest include cultural competence, philosophies of music
-                            education, community engagement, urban teaching and learning, and Hispanic issues. Her
-                            interest in community engagement has been demonstrated by her involvement with the College
-                            Music Society, having served as Chair of the National Committee for Community Engagement.
-                            She organized and hosted a national summit on community engagement for this organization and
-                            continues to serve on the committee.</p>
-                        <p>Her growing reputation in this field has been recognized by UNT as she was appointed by
-                            President Lane Rawlins to serve on the President’s Council on Community Engagement. Her work
-                            on this council resulted in her appointment as director of Service Learning and Community
-                            Engagement for the Division of University and Community Relations. She received the UNT
-                            Foundation Award for Community Service in 2015.</p>
-                        <p>Donna is active within the Denton community, is an avid photographer, an INFP, loves to cook
-                            and lives with her best friend, Iggy, a 100-pound German Shephard. She retired from
-                            full-time teaching at UNT in Spring 2020.</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-lg-6">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/james_ryon.jpg"
-                        alt="...">
-                    <div class="caption">
-                        <h4 class="text-center"><a href="#" class="" role="">James Ryon</a></h4>
-                        <p>James Ryon has appeared internationally as recitalist and soloist. Recent performances
-                            include the Bach D minor Concerto with the Southern Illinois Music Festival, the Strauss
-                            Oboe Concerto with the Orchestra Sinfonica Brasileira and both the Strauss Concerto and the
-                            Telemann Concerto for Oboe d'Amore with the UANL Chamber Orchestra in Monterrey, Mexico. In
-                            2011 he was appointed professor of oboe. He holds bachelor's and master's degrees in music
-                            from the Juilliard School and received performance fellowships with the Aspen, Berkshire,
-                            Blossom, Kneisel Hall and New College music festivals. His principal teachers were Robert
-                            Bloom and John Mack.</p>
-                        <p>Ryon has also served as professor of oboe at the Louisiana State University and the
-                            University of Akron, as well as principal oboist with the Akron Symphony, Florida Orchestra,
-                            Orquesta Filarmonica de Caracas, and Orchestra Estadual de Minas Gerais in Belo Horizonte,
-                            Brazil. For 19 years he was a member of the Solaris Quintet in residence at the University
-                            of Akron. He has also taught at the Baldwin Wallace Conservatory; University of South
-                            Florida, where he was a member of the Ars Nova Quintet; and Caracas Philharmonic
-                            Conservatory, where he was director of "Musica en las Escuelas", a musical outreach program
-                            for the city of Caracas, Venezuela.</p>
-                        <p>His interest and research in Brazilian music led him to organize BrazilFest '91 at the
-                            University of Akron, perform at various festivals of Brazilian contemporary music, and
-                            establish the Burle Marx Brazilian Music Collection at the University of Akron's Bierce
-                            Library. In March 2000 he commissioned and premiered João Guilherme Ripper's Abertura
-                            Concertante for Oboe, English Horn and Orchestra with the Akron Symphony. Ryon's CD of 20th
-                            Century Brazilian Chamber Music for Oboe, Cello and Piano with the Burle Marx Trio has been
-                            released by Jeanné Digital. His two recordings with Solaris may be found on Capstone
-                            Records.</p>
-                        <p>With a grant from the Louisiana Division of the Arts in 2005, he and the Burle Marx Trio
-                            inaugurated the Pelican State Chamber Music Series, a series of 12 concerts in New Roads and
-                            Baton Rouge, LA. Prof. Ryon's wide-ranging musical experience includes tours and concerts
-                            with the Pittsburgh Symphony, Cleveland Opera, Cleveland Ballet, Cleveland Orchestra, Ohio
-                            Ballet, Canton Symphony, Charleston Symphony, the Bach Aria Group and the British rock group
-                            Emerson, Lake and Palmer. Born in San Juan, Puerto Rico, he also holds a degree in
-                            engineering and applied science from Yale University.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="row">
-
-            <div style="border: 0px;" class="col-lg-6">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/kathleen_reynolds.jpg"
-                        alt="...">
-                    <div class="caption">
-                        <h4 class="text-center"><a href="#" class="" role="">Kathleen Reynolds</a></h4>
-                        <p>Kathleen Reynolds was the principal bassoonist of the Dallas Opera Orchestra and performed
-                            regularly with the Dallas Symphony, Fort Worth Symphony, and Chamber Music International.
-                            EcoClassics recorded her solo bassoon CD, Gems for Bassoon, with pianist Michele Levin and
-                            clarinetist Mitchell Lurie. She joined the College of Music at the University of North Texas
-                            as professor of bassoon and woodwind chamber music coordinator in the fall of 1995, retiring
-                            in 2020 after 24 years of dedicated service to the profession and being awarded emeritus
-                            status. She has performed at the Peter Britt Music Festival in Jacksonville, Oregon, the
-                            Fredericksburg Festival, the New Hampshire Music Festival, and with members of the Muir
-                            String Quartet at the Montana Chamber Music Festival.</p>
-                        <p>Prior to her appointment at UNT, Ms. Reynolds was a member of the Rochester Philharmonic for
-                            twenty-two years, and was on the faculty at SUNY Geneseo, Nazareth College, Roberts Wesleyan
-                            College and the Hochstein School of Music. Her solo performances include appearances with
-                            the Rochester Philharmonic, the Friends of Music Orchestra in Geneseo, the New Hampshire
-                            Music Festival, the University of North Texas Wind Symphony, and the University of North
-                            Texas Symphony Orchestra. She is a magna cum laude graduate of the Eastman School of Music,
-                            and has studied with K. David Van Hoesen, Norman Herzberg, and Bernard Garfield.</p>
-                    </div>
-                </div>
-            </div>
-            <div style="border: 0px;" class="col-lg-6">
-                <div style="border: 0px;" class="thumbnail">
-                    <img src="https://thankyou.music.unt.edu/sites/default/files/margaret_notley.jpg"
-                        alt="...">
-                    <div class="caption">
-                        <h4 class="text-center"><a href="#" class="" role="">Margaret Notley</a></h4>
-                        <p>Margaret Notley was Professor of Music History is the author of Lateness and Brahms: Music
-                            and Culture in the Twilight of Viennese Liberalism, AMS Studies in Music (Oxford University
-                            Press, 2007) and the editor of Opera after 1900: An Anthology of Critical Essays (2010). Her
-                            scholarship has been supported by grants from the Fulbright Scholar Program, National
-                            Endowment for the Humanities, and American Philosophical Society, and her work has appeared
-                            in Journal of the American Musicological Society, 19th-Century Music, Journal of Musicology,
-                            and a number of multi-author volumes. For an article on late nineteenth-century adagios she
-                            received the American Musicological Society's Alfred Einstein Award in 2000. From 2001 to
-                            2016, she was a member of the Editorial Board of Journal of Musicology, and she has been an
-                            Associate Editor of 19th-Century Music since 2006.</p>
-                    </div>
-                </div>
-            </div>
-
+    <!-- green box -->
+    <div style="
+    height: 10vh;  padding-left:20vw; padding-right:25vw;" class="">
+        <div class="text-center" style="width: 60vw;">
+            <p style="font-style:italic; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px;"
+                class=" text-center">General contractor for renovations was Turner Construction Company. The design team included HGA with architectural acoustics by Kirkegaard. Brown Reynolds Watford Architects, Inc. (BRWArch) served as architects.</p>
         </div>
 
-        <hr class="text-center"
-            style="margin:auto; width:70vw;height:2px;border:none;color:rgb(1, 106, 49);background-color:rgb(1, 106, 49);" />
-    </div>
-    <div class="container">
-        <div style="font-family: helvetica-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif; margin-bottom:0rem;font-size: 40px; color:rgb(0, 133, 62); margin:3rem;"
-            class="text-center">
-            Retiring Staff
-        </div>
-        <div class="row">
-
-            <div style="border: 0px;" class="col-lg-12">
-                <div style="border: 0px;" class="thumbnail">
-                    <div class="caption">
-                        <h4 class="text-center"><a href="#" class="" role="">Laura Fuller</a></h4>
-                        <h5 class="text-center">Concert & Event Scheduling</h5>
-                        <br>
-                        <p>Laura began working full-time at the College of Music, then known as North Texas State
-                            University, in the late 70’s and early 80’s. She returned to Denton in 1999 and began
-                            working for the College of Music in 2001.</p>
-                        <p>During the interim period, Laura held positions in other arts related
-                            organizations/businesses including The Center for Popular Music at Middle Tennessee State
-                            University, registrar for the East Carolina University Summer Choral Camp, general manager
-                            of the Greenville Choral Society and New Carolina Sinfonia and executive director of the
-                            Pitt County Arts Council in Greenville, NC. She has also worked for Innovative Percussion of
-                            Nashville, TN as music publications distributor.</p>
-                        <p>aura is married to Dr. Daniel Fuller, DDS and has two sons, both graduates of the UNT College
-                            of Music. She enjoys watching sports with her husband, “Go Army,” repurposing found items,
-                            gardening and spending time with her blended family.</p>
-                        <br>
-                        <br>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-        <hr class="text-center"
-            style="margin:auto; width:70vw;height:2px;border:none;color:rgb(1, 106, 49);background-color:rgb(1, 106, 49);" />
     </div>
     <script>
         $(document).ready(function () {
@@ -1238,7 +646,61 @@
                 dots: false,
                 slidesToShow: 1,
                 autoplay: true,
-                autoplaySpeed: 2000,
+                autoplaySpeed: 3000,
+                arrows: true,
+                responsive: [
+
+                    {
+                        breakpoint: 400,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: true
+                        }
+                    }
+                ]
+            });
+            $('.your-class2').slick({
+                dots: false,
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: true,
+                responsive: [
+
+                    {
+                        breakpoint: 400,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: true
+                        }
+                    }
+                ]
+            });
+            $('.your-class3').slick({
+                dots: false,
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: true,
+                responsive: [
+
+                    {
+                        breakpoint: 400,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: true
+                        }
+                    }
+                ]
+            });
+            $('.your-class4').slick({
+                dots: false,
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
                 arrows: true,
                 responsive: [
 
